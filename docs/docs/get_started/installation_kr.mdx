@@ -1,0 +1,84 @@
+# 설치하기
+
+## 공식 릴리즈
+
+LangChain 을 설치하기 위해서 다음 명령어를 실행하세요:
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from "@theme/CodeBlock";
+
+<Tabs>
+  <TabItem value="pip" label="Pip" default>
+    <CodeBlock language="bash">pip install langchain</CodeBlock>
+  </TabItem>
+  <TabItem value="conda" label="Conda">
+    <CodeBlock language="bash">conda install langchain -c conda-forge</CodeBlock>
+  </TabItem>
+</Tabs>
+
+이렇게 함으로써 LangChain의 최소 요구 사항을 설치할 것입니다.
+더 많은 LangChain의 가치는 다양한 모델 제공자, 데이터스토어 등과 통합할 때 많이 나타납니다.
+최소 요구 사항만 설치하는 것이므로, 특정 기능을 사용하기 위해서는 의존패키지를 설치해야 할 수 도 있습니다.
+
+
+## From source
+
+만약에 소스를 이용해서 설치하기를 원한다면, 해당 레포지터리를 클론 하여 설치할 수 있습니다. `PATH/TO/REPO/langchain/libs/langchain`
+
+```bash
+pip install -e .
+```
+
+## LangChain community
+The `langchain-community` package contains third-party integrations. It is automatically installed by `langchain`, but can also be used separately. Install with:
+`langchain-community` 패키지는 써드파티 통합이 포함되어있습니다. `langchain`에 의해 자동으로 설치되지만, 별도로 사용할 수 있습니다. 다음과 같이 설치하세요.
+
+
+```bash
+pip install langchain-community
+```
+
+## LangChain core
+`langchain-core` 패키지에는 LangChain 생태계의 나머지 부분이 사용하는 기본 추상화와 LangChain 표현 언어가 포함되어 있습니다. `langchain`에 의해 자동으로 설치되지만 별도로도 사용할 수 있습니다. 다음과 같이 설치하세요:
+
+
+```bash
+pip install langchain-core
+```
+
+## LangChain experimental
+`langchain-experimental` 패키지는 연구 및 실험적 용도를 위해 실험적 LangChain 코드를 포함하고 있습니다.
+다음과 같이 설치하세요:
+
+
+```bash
+pip install langchain-experimental
+```
+
+## LangServe
+LangServe는 개발자가 LangChain 을 실행가능하게 배포하는데 도움을 주고, 그 자체로 REST API로 쓰입니다.
+LangServe는 LangChain CLI에 의해 자동으로 설치됩니다.
+LangChain CLI를 사용하지 않는 경우, 다음과 같이 설치하세요:
+
+
+```bash
+pip install "langserve[all]"
+```
+클라이언트와 서버 의존성 모두에 대해, 또는 클라이언트 코드의 경우 `pip install "langserve[client]"`을, 서버 코드의 경우 `pip install "langserve[server]"`을 사용하여 설치합니다.
+
+## LangChain CLI
+LangChain CLI는 LangChain 템플릿 및 기타 LangServe 프로젝트를 다루는 데 유용합니다.
+다음과 같이 설치하세요:
+
+```bash
+pip install langchain-cli
+```
+
+## LangSmith SDK
+LangSmith SDK는 LangChain에 의해 자동으로 설치됩니다.
+LangChain을 사용하지 않는 경우, 다음과 같이 설치하세요:
+
+```bash
+pip install langsmith
+```
